@@ -1,10 +1,10 @@
 <resources>
 
-    <style name="Widget.Theme.Accelon22.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+    <style name="Widget.Theme.CMES.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
 
-    <style name="Widget.Theme.Accelon22.ButtonBar.Fullscreen" parent="">
+    <style name="Widget.Theme.CMES.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>

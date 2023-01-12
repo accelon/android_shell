@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.ksanaforge.accelon22'
+    namespace 'com.accelon.cmes'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.ksanaforge.accelon22"
+        applicationId "com.accelon.cmes"
         minSdk 21
         targetSdk 32
         versionCode 1

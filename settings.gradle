@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Accelon22"
+rootProject.name = "CMES"
 include ':app'
 include ':app'

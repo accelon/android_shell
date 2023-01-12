@@ -1,4 +1,4 @@
-package com.ksanaforge.accelon22;
+package com.accelon.cmes;
 
 import org.junit.Test;
 

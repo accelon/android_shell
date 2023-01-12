@@ -1,4 +1,4 @@
-package com.ksanaforge.accelon22;
+package com.accelon.cmes;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.ksanaforge.accelon22", appContext.getPackageName());
+        assertEquals("com.ksanaforge.cmes", appContext.getPackageName());
     }
 }
