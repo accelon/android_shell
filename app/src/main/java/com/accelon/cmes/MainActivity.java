@@ -2,14 +2,16 @@ package com.accelon.cmes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     WebView wv;
-
+    String homeurl="file:///android_asset/index.html";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
         //wv.getSettings().setPluginState(WebSettings.PluginState.ON);
         wv.getSettings().setSupportMultipleWindows(true);
 
-
         wv.setWebViewClient(new WebViewClient());
         //android_asset不加s
         if (savedInstanceState == null) {
-            wv.loadUrl("file:///android_asset/index.html");
+            SharedPreferences mPerferences = PreferenceManager.getDefaultSharedPreferences(this);
+            String hashtag = mPerferences.getString("hashtag", "");
+            wv.loadUrl(homeurl+hashtag);
         }
         //加上這個就可以開檔案，因為android 8以後有改strictMode，不能直接用file:///開檔案，要用fileprovider來做
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -42,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         wv.saveState(outState);
+        SharedPreferences mPerferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor mEditor = mPerferences.edit();
+        mEditor.putString( "hashtag",wv.getUrl().replace(homeurl,""));
+        mEditor.commit();
     }
 
     @Override
