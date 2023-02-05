@@ -1,3 +1,7 @@
+if not exist "app\src\main\assets" (
+   mkdir app\src\main\assets
+)
+
 del/q/s app\src\main\assets\
 copy/y ..\accelon22\dist\index.css app\src\main\assets\index.css
 copy/y ..\accelon22\dist\index.js app\src\main\assets\index.js
