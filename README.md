@@ -5,7 +5,7 @@ webview shell for accelon22
 安裝 Android Studio ，進入後選取此目錄，打開project，build。
 如果之前沒有安裝Java 環境，加入 這兩個目錄到 Path，這樣才可以執行 gradle 和 adb (android debugging bridge)
 
-    %AppData%\Local\Android\Sdk\platform-tools
+     %LocalAppData%\Android\Sdk\platform-tools 
     C:\Program Files\Android\Android Studio\jre\bin
 
 並且須加入一個新的環境變數 
